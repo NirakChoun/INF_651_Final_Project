@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DishCover - Favorites</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.4/components/testimonials/testimonial-3/assets/css/testimonial-3.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-1 mb-md-0 link-body-emphasis text-decoration-none"
+        >
+          <span class="fs-4 logo-text me-4">DishCover</span>
+        </a>
+        <button class="btn btn-primary d-block d-md-none" id="sidebarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar navbar-expand-md">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="discover.html" class="nav-link text-dark">Discover</a>
+              </li>
+              <li class="nav-item">
+                <a href="random.html" class="nav-link text-dark">Random</a>
+              </li>
+              <li class="nav-item">
+                <a href="meal-plan.html" class="nav-link text-dark"
+                  >Meal Plan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="favorites.html" class="nav-link text-dark"
+                  >Favorites</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <i class="fa-solid fa-circle-xmark close-btn" id="sidebarClose"></i>
+      <div class="sidebar-content">
+        <!-- Your sidebar content goes here -->
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="index.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="discover.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="Discover"
+            >
+              Discover
+            </a>
+          </li>
+          <li>
+            <a
+              href="random.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="random"
+            >
+              Random
+            </a>
+          </li>
+          <li>
+            <a
+              href="meal-plan.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="meal-plan"
+            >
+              Meal Plan
+            </a>
+          </li>
+          <li>
+            <a
+              href="favorites.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="favorites"
+            >
+              Favorites
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Main Section -->
+    <div class="meal-plan container my-4">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Breakfast</th>
+              <td
+                class="meal-slot"
+                data-day="monday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="tuesday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="wednesday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="thursday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="friday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="saturday"
+                data-meal="breakfast"
+              ></td>
+              <td
+                class="meal-slot"
+                data-day="sunday"
+                data-meal="breakfast"
+              ></td>
+            </tr>
+            <tr>
+              <th>Lunch</th>
+              <td class="meal-slot" data-day="monday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="tuesday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="wednesday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="thursday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="friday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="saturday" data-meal="lunch"></td>
+              <td class="meal-slot" data-day="sunday" data-meal="lunch"></td>
+            </tr>
+            <tr>
+              <th>Dinner</th>
+              <td class="meal-slot" data-day="monday" data-meal="dinner"></td>
+              <td class="meal-slot" data-day="tuesday" data-meal="dinner"></td>
+              <td
+                class="meal-slot"
+                data-day="wednesday"
+                data-meal="dinner"
+              ></td>
+              <td class="meal-slot" data-day="thursday" data-meal="dinner"></td>
+              <td class="meal-slot" data-day="friday" data-meal="dinner"></td>
+              <td class="meal-slot" data-day="saturday" data-meal="dinner"></td>
+              <td class="meal-slot" data-day="sunday" data-meal="dinner"></td>
+            </tr>
+            <tr>
+              <th>Total Calories</th>
+              <td class="total-calories" data-day="monday"></td>
+              <td class="total-calories" data-day="tuesday"></td>
+              <td class="total-calories" data-day="wednesday"></td>
+              <td class="total-calories" data-day="thursday"></td>
+              <td class="total-calories" data-day="friday"></td>
+              <td class="total-calories" data-day="saturday"></td>
+              <td class="total-calories" data-day="sunday"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a recipe..."
+        />
+        <div id="recipeList"></div>
+      </div>
+    </div>
+    <!-- End Main Section -->
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center mt-auto">
+      <div class="container p-4 pb-0">
+        <section class="mb-4">
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+
+      <div class="text-center p-3 footer-copyright">© 2024 DishCover</div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

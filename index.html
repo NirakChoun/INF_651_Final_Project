@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DishCover</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.4/components/testimonials/testimonial-3/assets/css/testimonial-3.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-1 mb-md-0 link-body-emphasis text-decoration-none"
+        >
+          <span class="fs-4 logo-text me-4">DishCover</span>
+        </a>
+
+        <button class="btn btn-primary d-block d-md-none" id="sidebarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar navbar-expand-md">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="discover.html" class="nav-link text-dark">Discover</a>
+              </li>
+              <li class="nav-item">
+                <a href="random.html" class="nav-link text-dark">Random</a>
+              </li>
+              <li class="nav-item">
+                <a href="meal-plan.html" class="nav-link text-dark"
+                  >Meal Plan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="favorites.html" class="nav-link text-dark"
+                  >Favorites</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <i class="fa-solid fa-circle-xmark close-btn" id="sidebarClose"></i>
+      <div class="sidebar-content">
+        <!-- Your sidebar content goes here -->
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="index.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="discover.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="Discover"
+            >
+              Discover
+            </a>
+          </li>
+          <li>
+            <a
+              href="random.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="random"
+            >
+              Random
+            </a>
+          </li>
+          <li>
+            <a
+              href="meal-plan.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="meal-plan"
+            >
+              Meal Plan
+            </a>
+          </li>
+          <li>
+            <a
+              href="favorites.html"
+              class="text-decoration-none d-flex align-items-center text-dark nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="favorites"
+            >
+              Favorites
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Hero -->
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-label="Slide 1"
+          aria-current="true"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          class=""
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+          class=""
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-item-next carousel-item-start">
+          <img
+            src="assets/img/cooking-carousel-1.webp"
+            class="d-block w-100 img-fluid"
+            alt="..."
+          />
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="">Welcome to DishCover!</h1>
+              <p class="">
+                Perfect website for beginner cookers to learn more about cooking
+                and find new recipes.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-carousel" href="#">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/img/cooking-carousel-2.jpeg"
+            class="d-block w-100 img-fluid"
+            alt="..."
+          />
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Discover New Recipes</h1>
+              <p>
+                Easily find new recipes with included required ingredients and
+                beginner-friendly instructions.
+              </p>
+              <p><a class="btn btn-lg btn-carousel" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active carousel-item-start">
+          <img
+            src="assets/img/cooking-carousel-3.jpeg"
+            class="d-block w-100 img-fluid"
+            alt="..."
+          />
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Organize Your Weekly Meal Plan</h1>
+              <p>
+                Count your calories and organize your meal plan according to
+                your needs.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-carousel" href="#">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Features -->
+    <section class="py-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <h3 class="fs-6 mb-2 text-secondary text-center text-uppercase">
+              What We Do?
+            </h3>
+            <h2 class="display-5 mb-5 text-center">
+              We are helping people to start loving cooking and be healthier.
+            </h2>
+            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-4 gy-xl-0">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  fill="currentColor"
+                  class="bi bi-search-heart text-danger mb-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"
+                  />
+                  <path
+                    d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"
+                  />
+                </svg>
+                <h4 class="mb-4">Discover Recipes</h4>
+                <p class="mb-4 text-secondary">
+                  We can help you discover new and exciting recipes that will
+                  engage your culinary skills and promote your love for cooking.
+                </p>
+                <a
+                  href="#!"
+                  class="fw-bold text-decoration-none link-danger feature-link"
+                >
+                  Start Discovering
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  fill="currentColor"
+                  class="bi bi-shuffle text-danger mb-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
+                  />
+                  <path
+                    d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
+                  />
+                </svg>
+                <h4 class="mb-4">Random Recipe</h4>
+                <p class="mb-4 text-secondary">
+                  Don't know what to cook? Are you feeling adventurous today?
+                  Try our randomize feature and learn new recipes now.
+                </p>
+                <a
+                  href="#!"
+                  class="fw-bold text-decoration-none link-danger feature-link"
+                >
+                  Start Randomizing
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  fill="currentColor"
+                  class="bi bi-file-spreadsheet text-danger mb-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v4h10V2a1 1 0 0 0-1-1zm9 6h-3v2h3zm0 3h-3v2h3zm0 3h-3v2h2a1 1 0 0 0 1-1zm-4 2v-2H6v2zm-4 0v-2H3v1a1 1 0 0 0 1 1zm-2-3h2v-2H3zm0-3h2V7H3zm3-2v2h3V7zm3 3H6v2h3z"
+                  />
+                </svg>
+                <h4 class="mb-4">Plan Meal</h4>
+                <p class="mb-4 text-secondary">
+                  We can help you track your calories intake and plan your meal
+                  for breakfast, lunch and dinner weekly. Suitable for your
+                  weight-loss journey.
+                </p>
+                <a
+                  href="#!"
+                  class="fw-bold text-decoration-none link-danger feature-link"
+                >
+                  Start Planning
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="56"
+                  height="56"
+                  fill="currentColor"
+                  class="bi bi-bookmark-heart text-danger mb-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"
+                  />
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"
+                  />
+                </svg>
+                <h4 class="mb-4">Save Favorites</h4>
+                <p class="mb-4 text-secondary">
+                  Fell in love with a recipe, but the process might be too
+                  complicated? You can easily add it to your favorites for
+                  future references.
+                </p>
+                <a
+                  href="#!"
+                  class="fw-bold text-decoration-none link-danger feature-link"
+                >
+                  View Favorites
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- Testimonials -->
+    <section class="bg-light py-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+            <h2 class="fs-6 text-secondary mb-2 text-uppercase text-center">
+              Users Feedback
+            </h2>
+            <p class="display-5 mb-4 mb-md-5 text-center">
+              We deliver what we promise. See what users are expressing about
+              us.
+            </p>
+            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-4 gy-md-0 gx-xxl-5">
+          <div class="col-12 col-md-4">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img
+                    class="img-fluid rounded rounded-circle mb-4 border border-5"
+                    loading="lazy"
+                    src="assets/img/testimonial-img-1.jpg"
+                    alt="Luna John"
+                  />
+                  <figcaption>
+                    <div
+                      class="bsb-ratings text-warning mb-3"
+                      data-bsb-star="5"
+                      data-bsb-star-off="0"
+                    ></div>
+                    <blockquote class="bsb-blockquote-icon mb-4">
+                      We were absolutely delighted with the recipes we found on
+                      DishCover. Each recipe was clear, delicious, and quick to
+                      make. We highly recommend DishCover to anyone looking to
+                      simplify their cooking and try new, exciting meals.
+                    </blockquote>
+                    <h4 class="mb-2">Luna John</h4>
+                    <h5 class="fs-6 text-secondary mb-0">5 Months User</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img
+                    class="img-fluid rounded rounded-circle mb-4 border border-5"
+                    loading="lazy"
+                    src="assets/img/testimonial-img-2.jpg"
+                    alt="Mark Smith"
+                  />
+                  <figcaption>
+                    <div
+                      class="bsb-ratings text-warning mb-3"
+                      data-bsb-star="4"
+                      data-bsb-star-off="1"
+                    ></div>
+                    <blockquote class="bsb-blockquote-icon mb-4">
+                      The meal planning feature helped us organize our week
+                      effortlessly, and the variety of recipes kept our family
+                      excited about dinner every night. We highly recommend
+                      DishCover to anyone wanting to make cooking fun and easy.
+                    </blockquote>
+                    <h4 class="mb-2">Mark Smith</h4>
+                    <h5 class="fs-6 text-secondary mb-0">3 Months User</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card border-0 border-bottom border-danger shadow-sm">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img
+                    class="img-fluid rounded rounded-circle mb-4 border border-5"
+                    loading="lazy"
+                    src="assets/img/testimonial-img-3.jpeg"
+                    alt="Luke Reeves"
+                  />
+                  <figcaption>
+                    <div
+                      class="bsb-ratings text-warning mb-3"
+                      data-bsb-star="5"
+                      data-bsb-star-off="0"
+                    ></div>
+                    <blockquote class="bsb-blockquote-icon mb-4">
+                      DishCover is a game-changer for our kitchen! The discover
+                      page makes finding new recipes a breeze, and the random
+                      recipe feature has introduced us to so many delicious
+                      meals. It simplifies our meal planning and keeps things
+                      fresh.
+                    </blockquote>
+                    <h4 class="mb-2">Luke Reeves</h4>
+                    <h5 class="fs-6 text-secondary mb-0">8 Months User</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center">
+      <div class="container p-4 pb-0">
+        <section class="mb-4">
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+
+      <div class="text-center p-3 footer-copyright">© 2024 DishCover</div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
